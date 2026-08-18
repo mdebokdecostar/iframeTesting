@@ -1,0 +1,386 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DECOSTAR - Seasonal Inspiration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "winter-bone": "#F9F7F2",
+                        "on-error": "#ffffff",
+                        "charcoal-ink": "#1A1A1A",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-primary-fixed-variant": "#544518",
+                        "on-surface": "#1b1c19",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3ee",
+                        "on-tertiary-fixed": "#351000",
+                        "tertiary-fixed-dim": "#ffb693",
+                        "surface-tint": "#6d5d2d",
+                        "surface-bright": "#fbf9f4",
+                        "on-secondary-fixed": "#28180b",
+                        "on-tertiary-fixed-variant": "#6e381c",
+                        "surface-container": "#f0eee9",
+                        "secondary-fixed-dim": "#dec1ac",
+                        "surface-variant": "#e4e2dd",
+                        "inverse-primary": "#dbc58b",
+                        "secondary": "#705a49",
+                        "deep-gold": "#AE9A64",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary": "#8b4f31",
+                        "primary": "#6d5d2d",
+                        "on-primary": "#ffffff",
+                        "rustic-clay": "#7D4427",
+                        "on-secondary-container": "#755e4d",
+                        "primary-fixed": "#f8e1a5",
+                        "on-primary-container": "#3f3205",
+                        "shadow-brown": "#4A3728",
+                        "on-background": "#1b1c19",
+                        "inverse-surface": "#30312e",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#fbddc7",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#ae9a64",
+                        "outline-variant": "#cec6b6",
+                        "on-secondary-fixed-variant": "#574333",
+                        "surface-container-high": "#eae8e3",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#d28a68",
+                        "outline": "#7d7669",
+                        "background": "#fbf9f4",
+                        "surface-dim": "#dbdad5",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-surface-variant": "#4b463a",
+                        "secondary-container": "#f8dac5",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-tertiary-container": "#56250a",
+                        "surface": "#fbf9f4",
+                        "primary-fixed-dim": "#dbc58b",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Libre Caslon Text"],
+                        "headline-xl-mobile": ["Libre Caslon Text"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .ambient-shadow {
+            box-shadow: 0 10px 40px -10px rgba(74, 55, 40, 0.08);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(74, 55, 40, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-deep-gold selection:text-white">
+<!-- TopNavBar -->
+<nav class="bg-winter-bone dark:bg-charcoal-ink border-b border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Mobile Menu Icon (Hidden on Desktop) -->
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-deep-gold tracking-tight" href="#">
+                DECOSTAR
+            </a>
+<!-- Navigation Links (Hidden on Mobile) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-primary dark:text-deep-gold border-b-2 border-deep-gold pb-1 scale-95 duration-200 ease-in-out" href="#">Collections</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">New Arrivals</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Trade Program</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Showrooms</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Sustainability</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold transition-colors duration-300 scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold transition-colors duration-300 scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-80" data-alt="A sophisticated home decor arrangement featuring textured ceramic vases, soft lighting, and autumnal floral accents in a bright, modern gallery setting. The composition is elegant, emphasizing tactile materials and warm, muted earth tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtrv8fmNn6N0gMV-Pft4QjsmpiazjOe02oJ7U9LBf13eGT5yhO1sgEZQxBq3SFcwv0uN32yrwOgE6XM-0EWjRYgwoIw9cptO8LZ-m7F8CXBaxwmheyFrrH__4isKLqi25ECLc-WY0m3knNbLQ5nDdmsjZdZOXvkQChWIbOvvdXLP25SMXK-1msRjJvYfW04VZGtRLMswmTHfE29BEQdWfojWWk45j2j7sIfw0uQ87vwAg8PMAWeMWj')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
+<span class="block font-label-lg text-label-lg text-deep-gold uppercase tracking-widest mb-4">Seasonal Inspiration</span>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface mb-6 max-w-3xl mx-auto">
+                    Curated for the Season
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Discover our most viewed pieces. A collection of tactile textures, warm hues, and sophisticated silhouettes designed to elevate your interior spaces.
+                </p>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300" href="#collection">
+                    Explore the Collection
+                </a>
+</div>
+</section>
+<!-- Product Collection Grid Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="collection">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Autumn Collection</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+                        The definitive pieces currently defining high-end interior curation.
+                    </p>
+</div>
+<div class="h-[1px] bg-deep-gold w-full max-w-[200px] hidden md:block mb-4"></div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, organically shaped white ceramic vase with subtle ribbed texture, beautifully lit to show its form and depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeNOO48mTa8dAc2qFnN6qmbHnqUJ47EdnEghgI592pLIS6ilaaivyALz7v92_dCC2X0B723CPhOTihG3qnUToxKO7lNHfTT8kSx61lQr2G9lETAmm9woFWZQs0iHBYLm_yiC93U84qP5jjbHJ7fde2MMFqQpYi0jitZ3GFpaeN-0xRfkn2AKfxBPFmbfjyhXdPPfJPOVzIqbSp6vAcShKnfStKUvJTjljYDIebz4X62mkLlG3ZLDvI">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 833054</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Ribbed Ceramic Vessel</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">A sculptural piece defined by its vertical texture and matte finish.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A striking amber-colored glass vase with a wide, ruffled rim, catching the light elegantly against a pale background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkfKVoikDUF8pDdG14c1O-QqIylTbqnYd-w041Ox6mlsSXMWhD4GEZPjMmF1kpqEpAQdJkbHjEc0ZljAmDIZdy4qmNFjVrQ3C2T1kWGLUHagARWTAzlwiQm9aoYKzFVfoqYaSNV3jk43IBnM8hz0dTFIDEejVnJ_S3ygDO7Z1La9jKVCmykrVou1uA_BEwAunypsGWNXvlMpe0fcf9Rljj2c6dI7SL0X8qpZi4fd3wsL2qUmY00Vh2">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 834270</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Amber Ruffled Glass</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Warm seasonal hues captured in fluid, organic glasswork.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A heavily textured, bulbous vase covered in small, decorative nodules, exhibiting a rich earthy brown and cream glaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm_sqpVgeMSJzHxQLHSN2AY5QcGitl73e3kGZZ29bdde5CHy-0DOD0bPqkB-LosKuyQtEOtRvCbw5ay6rJ8-UpuykaWlvgE7FjAczr-I9oPj2d3rPF6KEHnwnat_Si-nSnlKyX9vu8lHX-IDMk8SqYUsTqefI7elDSEnO-9BQiln9LI4Z0DXiJNVqLFgRq64vtNsg8BZ_BJK_FHgWZVE8fvDfzqnroZ83hXrkQp9DEGmoXXOuB6lyU">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 831192</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Nodule Accent Vase</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Intense tactile interest perfect for breaking up smooth surfaces.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, organically shaped white ceramic vase with subtle ribbed texture, beautifully lit to show its form and depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeNOO48mTa8dAc2qFnN6qmbHnqUJ47EdnEghgI592pLIS6ilaaivyALz7v92_dCC2X0B723CPhOTihG3qnUToxKO7lNHfTT8kSx61lQr2G9lETAmm9woFWZQs0iHBYLm_yiC93U84qP5jjbHJ7fde2MMFqQpYi0jitZ3GFpaeN-0xRfkn2AKfxBPFmbfjyhXdPPfJPOVzIqbSp6vAcShKnfStKUvJTjljYDIebz4X62mkLlG3ZLDvI">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 843638</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Tall Ceramic Pillar Set</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Elegant modern pillar set for an elevated touch.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A striking amber-colored glass vase with a wide, ruffled rim, catching the light elegantly against a pale background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkfKVoikDUF8pDdG14c1O-QqIylTbqnYd-w041Ox6mlsSXMWhD4GEZPjMmF1kpqEpAQdJkbHjEc0ZljAmDIZdy4qmNFjVrQ3C2T1kWGLUHagARWTAzlwiQm9aoYKzFVfoqYaSNV3jk43IBnM8hz0dTFIDEejVnJ_S3ygDO7Z1La9jKVCmykrVou1uA_BEwAunypsGWNXvlMpe0fcf9Rljj2c6dI7SL0X8qpZi4fd3wsL2qUmY00Vh2">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 841976</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Autumn Floral Arrangement</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">A rich bouquet of dried seasonal botanicals.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A heavily textured, bulbous vase covered in small, decorative nodules, exhibiting a rich earthy brown and cream glaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm_sqpVgeMSJzHxQLHSN2AY5QcGitl73e3kGZZ29bdde5CHy-0DOD0bPqkB-LosKuyQtEOtRvCbw5ay6rJ8-UpuykaWlvgE7FjAczr-I9oPj2d3rPF6KEHnwnat_Si-nSnlKyX9vu8lHX-IDMk8SqYUsTqefI7elDSEnO-9BQiln9LI4Z0DXiJNVqLFgRq64vtNsg8BZ_BJK_FHgWZVE8fvDfzqnroZ83hXrkQp9DEGmoXXOuB6lyU">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 842830</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Textured Bronze Lantern</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Vintage inspired metallic lantern for warm evening ambiance.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A striking amber-colored glass vase with a wide, ruffled rim, catching the light elegantly against a pale background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkfKVoikDUF8pDdG14c1O-QqIylTbqnYd-w041Ox6mlsSXMWhD4GEZPjMmF1kpqEpAQdJkbHjEc0ZljAmDIZdy4qmNFjVrQ3C2T1kWGLUHagARWTAzlwiQm9aoYKzFVfoqYaSNV3jk43IBnM8hz0dTFIDEejVnJ_S3ygDO7Z1La9jKVCmykrVou1uA_BEwAunypsGWNXvlMpe0fcf9Rljj2c6dI7SL0X8qpZi4fd3wsL2qUmY00Vh2">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 841806</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Decorative Horn Accent</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">A unique heritage piece blending rustic texture and modern shape.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="bg-surface-container-lowest ambient-shadow p-6 flex flex-col hover-lift group">
+<div class="relative w-full aspect-square mb-6 bg-surface-container-low overflow-hidden flex items-center justify-center">
+<img class="object-contain w-4/5 h-4/5 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, organically shaped white ceramic vase with subtle ribbed texture, beautifully lit to show its form and depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeNOO48mTa8dAc2qFnN6qmbHnqUJ47EdnEghgI592pLIS6ilaaivyALz7v92_dCC2X0B723CPhOTihG3qnUToxKO7lNHfTT8kSx61lQr2G9lETAmm9woFWZQs0iHBYLm_yiC93U84qP5jjbHJ7fde2MMFqQpYi0jitZ3GFpaeN-0xRfkn2AKfxBPFmbfjyhXdPPfJPOVzIqbSp6vAcShKnfStKUvJTjljYDIebz4X62mkLlG3ZLDvI">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div class="mb-6">
+<span class="font-label-sm text-label-sm text-deep-gold block mb-1">ID: 843886</span>
+<h4 class="font-body-lg text-body-lg text-on-surface mb-2">Rustic Foliage Wreath</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">A seasonal statement wreath featuring dried autumn leaves and warm tones.</p>
+</div>
+<button class="w-full py-3 bg-deep-gold text-white font-label-lg text-label-lg uppercase tracking-wider hover:bg-rustic-clay transition-colors duration-300">
+                            Shop Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+    <div class="mb-12 text-center">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Shop by Category</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Refined selections for every corner of your home.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Category Card 1 -->
+        <a href="#" class="group relative h-[400px] overflow-hidden flex items-end p-8">
+            <div class="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105">
+                <img src="https://lh3.googleusercontent.com/aida/AP1WRLsITbp3_fIGqiHBlLrsS8Khjrd37HXznDKxwiKT7iebpsxltcOW7asI7zAQs985nNWB0TkUPw_0Q2RM-1UzzWY3RJYi3xvdPKZwFnLJHTwiuCmNulY1GURd6KpHh2ikkNrwjAR4A5V4STQ7Jh3FT4-D4fhIBrmFWJ1iE0Jrx4fKpSpYU4equ5g1hrWPqsUzvCw-jYNRv3j5-4c5dUH2nFJJRh1M2F_DaY-C5tqfk_Ol_8fXMeuDjRzydDM" alt="Ceramics" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            </div>
+            <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">Ceramics</h3>
+                <span class="font-label-lg text-label-lg text-white uppercase tracking-widest flex items-center gap-2">
+                    Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </span>
+            </div>
+        </a>
+        <!-- Category Card 2 -->
+        <a href="#" class="group relative h-[400px] overflow-hidden flex items-end p-8">
+            <div class="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105">
+                <img src="https://lh3.googleusercontent.com/aida/AP1WRLv3C6KF9KdQkbbZcc-Cc1t7JWY84fdSnZzWOZMnCN7df7zXl7yir5nG1rFLvvCdZ3Ez6uCTVau2suXoWqTbEWrwpOwhoMdEc6uDkrXML8RSCaUURt0uA4DtcM2MGERg0_bXE55M3Dqmq1HJrvKU2PGgBFKY65IGvLegxA91irlwmnrek3IpD4sTVpAVEubnUt-R6w4VYSh1pItxx5AXJZhd3oavHrf6f6FAwHTQhhlMlaHRkD6AHuOwSH8" alt="Floral Decor" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            </div>
+            <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">Floral Decor</h3>
+                <span class="font-label-lg text-label-lg text-white uppercase tracking-widest flex items-center gap-2">
+                    Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </span>
+            </div>
+        </a>
+        <!-- Category Card 3 -->
+        <a href="#" class="group relative h-[400px] overflow-hidden flex items-end p-8">
+            <div class="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105">
+                <img src="https://lh3.googleusercontent.com/aida/AP1WRLvTBYNOrX9rOhE_YutZ0RpxP0NPWMTsztnhpGvq8dp4Yh_8-LMX4u1VsRdOoI4tlwTZdp1OvkL-NxdkjpseGrafIwfKJjRmlPVWsbDC_Mk9I2AuSKwpre8R0ZdoWP6EFZ_CIsNexVtk9Uj_7q13luNExT3L70OFlCx400OLO5cRfZa4bsU8DwChec4iWts7AA_axRw1EfXDzAW8t8gY2BkufDhzL4kqlrkjY4Qx75KO_ehBu45wZd-mAw" alt="Home Accents" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            </div>
+            <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">Home Accents</h3>
+                <span class="font-label-lg text-label-lg text-white uppercase tracking-widest flex items-center gap-2">
+                    Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </span>
+            </div>
+        </a>
+    </div>
+</section></main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-charcoal-ink w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-base text-center mt-20">
+<div class="mb-4">
+<span class="font-headline-md text-headline-md text-deep-gold">DECOSTAR</span>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Shipping Information</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Contact Support</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-deep-gold hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">Catalog Download</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface dark:text-surface-bright max-w-md mx-auto">
+            © 2024 DECOSTAR B2B. All rights reserved. Premium Home Curation.
+        </p>
+</footer>
+
+
+</body></html>
