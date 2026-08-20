@@ -53,6 +53,6 @@
     .btn:hover {
       background-color: #1d4ed8;
     }
-    .overlay-text {
-      padding: 0; 
-    }
+      .overlay-text {
+        padding: 0 !important;
+      }
